@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<script src="${ctx_assets}/laypage/laypage.js"></script>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>万洲嘉智组件库</title>
+    <link rel="shortcut icon" href="../ui/img/favicon.ico">
+    <link rel="stylesheet" href="../ui/css/base.css">
+    <link rel="stylesheet" href="../dep/prism/prism.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="../ui/css/layout/docs-layout.css">
+    <script src="../ui/js/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+    <div id="components" class="docs-layout">
+        <!-- 页面顶部开始 -->
+        <header class="light">
+            <div class="align-center">
+                <a href="../index.html" title="ManstroUI"><span class="logo ms-fl font26">ManstroUI</span></a>
+                <nav class="ms-fr">
+                    <ul>
+                        <li><a href="../index.html" title="ManstroUI">开始学习</a></li>
+                        <li><a href="../standard/semver.html" title="语义化版本">语义化版本</a></li>
+                        <li><a href="../standard/codeguide.html" title="前端规范">前端规范</a></li>
+                        <li><a href="http://www.appinn.com/markdown/" title="Markdown语法说明">Markdown语法说明</a></li>
+                        <li><a href="../lib-global-styles/global-styles.html" title="全局样式库">全局样式库</a></li>
+                        <li><a href="../lib-components/components.html" title="组件库">组件库</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="docs-header">
+            <div class="align-center">
+                <h1>万洲嘉智组件库</h1>
+                <p>集成可复用的组件，包括下拉列表、加减框、多种分页效果等更多功能。</p>
+            </div>
+        </div>
+        <!-- 页面顶部结束 -->
+        <!-- 主体部分开始 -->
+        <div class="main">
+            <!-- 左侧导航开始 -->
+            <aside class="lf-nav">
+                <nav>
+                    <p class="lf-nav-title">组件列表</p>
+                    <ul class="parent-nav">
+                        <li name="dropdown"><a href="#dropdown">下拉列表</a></li>
+                        <li name="plus-minus"><a href="#plus-minus">加减框</a></li>
+                        <li name="laypage"><a href="#laypage">动态分页演示</a></li>
+                        <li name="check-strong"><a href="#check-strong">验证密码强度</a></li>
+                        <li name="progress-bar"><a href="#progress-bar">进度条</a></li>
+                        <li name="birthday-out"><a href="#birthday-out">生日</a></li>
+                        <li name="pca"><a href="#pca">省市区联动</a></li>
+                        <li name="ueditor"><a href="#ueditor">ueditor编辑器</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <!-- 左侧导航结束 -->
+            <!-- 各组件开始 -->
+            <article class="rg-content">
+                <section id="dropdown">
+                    <h2>下拉列表  Dropdown</h2>
+                    <!-- 下拉列表开始 -->
+                    <div id="dropdown-html">
+                        <div class="dropdown">
+                            <p class="dropdown-title">
+                                <span>列表一</span>
+                                <i class="manstro-icon icon-caret"></i>
+                            </p>
+                            <ul class="dropdown-menu">
+                                <li>列表一</li>
+                                <li>列表二</li>
+                                <li>列表三</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 这里显示下拉列表的html代码 -->
+                    <div id="dropdown-code">
+                        <pre class="language-markup"><code>
+&lt;div class="dropdown"&gt;
+    &lt;p class="dropdown-title"&gt;
+        &lt;span&gt;列表一&lt;/span&gt;
+        &lt;i class="manstro-icon icon-caret"&gt;&lt;/i&gt;
+    &lt;/p&gt;
+    &lt;ul class="dropdown-menu"&gt;
+        &lt;li&gt;列表一&lt;/li&gt;
+        &lt;li&gt;列表二&lt;/li&gt;
+        &lt;li&gt;列表三&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+                        </code></pre>
+                    </div>
+                    <!-- 下拉列表结束 -->
+                </section>
+                <section id="plus-minus">
+                    <h2>数字加减框  Plus-minus</h2>
+                    <!-- 数字加减框开始 -->
+                    <div id="plus-minus-html">
+                        <div class="plus-minus">
+                            <span class="minus">-</span>
+                            <input type="text" value="1" class="text-amount">
+                            <span class="plus">+</span>
+                        </div>
+                    </div>
+                    <!-- 数字加减框结束 -->
+                    <!-- 这里显示下拉列表的html代码 -->
+                    <div id="plus-minus-code">
+                        <pre class="language-markup"><code>
+&lt;div class="plus-minus"&gt;
+    &lt;span class="minus"&gt;-&lt;/span&gt;
+    &lt;input type="text" value="1" class="text-amount"&gt;
+    &lt;span class="plus"&gt;+&lt;/span&gt;
+&lt;/div>
+</code></pre>
+                    </div>
+                    <script type="text/javascript">
+                    </script>
+                </section>
+                <section id="laypage">
+                    <h2>动态分页演示 Laypage</h2>
+                    <!-- 动态分页演示开始 -->
+                    <div id="pagination"></div>
+                    <div>
+                        <p>====================================================================</p>
+                        <p>把laypage整个目录放入你的项目，只需引入laypage.js即可，其它一律无视。</p>
+                        <p>详细文档直接进入官网：<a href="http://laypage.layui.com">http://laypage.layui.com</a></p>
+                    </div>
+                    <pre class="language-js"><code>
+laypage({
+    cont: $('#pagination'), //容器。值支持id名、原生dom对象，jquery对象,
+    pages: 20, //总页数
+    skip: true, //是否开启跳页
+    skin: '#d9534f',
+    groups: 3 //连续显示分页数
+});
+                    </code></pre>
+                    <!-- 动态分页演示结束 -->
+                    <!-- 需要引入资源库中的laypage.js -->
+                </section>
+                <section id="check-strong">
+                    <h2>验证密码强度 Pwd-strength</h2>
+                    <div id="pwd-strong-html">
+                        <!-- 验证密码强度开始 -->
+                        <div id="check-pwd-strong">
+                            <input type="password" value="" maxlength="16" />
+                            <div id="tips">
+                                <span>弱</span>
+                                <span>中</span>
+                                <span>强</span>
+                                <span>非常好</span>
+                            </div>
+                        </div>
+                        <!-- 验证密码强度结束 -->
+                    </div>
+                    <pre class="language-markup"><code>
+&lt;div id="check-pwd-strong"&gt;
+    &lt;input type="password" value="" maxlength="16" /&gt;
+    &lt;div id="tips"&gt;
+        &lt;span&gt;弱&lt;/span&gt;
+        &lt;span&gt;中&lt;/span&gt;
+        &lt;span&gt;强&lt;/span&gt;
+        &lt;span&gt;非常好&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code></pre>
+                </section>
+                <section id="progress-bar">
+                    <h2>进度条</h2>
+                    <div id="line-html">
+                        <div class="line-item site-grade">
+                            <!-- 进度条 -->
+                            <div class="progress-bar-grey"></div>
+                            <div class="progress-bar-yellow"></div>
+                            <!-- 等级标志位置 -->
+                            <div class="grade-name">
+                                <div class="grade-img-text">
+                                    <i class="manstro-icon icon-lv icon-lv1"></i>
+                                    <span class="grade-num">0</span>
+                                </div>
+                                <div class="grade-img-text">
+                                    <i class="manstro-icon icon-lv icon-lv2"></i>
+                                    <span class="grade-num">100</span>
+                                </div>
+                                <div class="grade-img-text">
+                                    <i class="manstro-icon icon-lv icon-lv3"></i>
+                                    <span class="grade-num">500</span>
+                                </div>
+                                <div class="grade-img-text">
+                                    <i class="manstro-icon icon-lv icon-lv4"></i>
+                                    <span class="grade-num">1000</span>
+                                </div>
+                                <div class="grade-img-text">
+                                    <i class="manstro-icon icon-lv icon-lv5"></i>
+                                    <span class="grade-num">2000</span>
+                                </div>
+                                <div class="grade-img-text">
+                                    <i class="manstro-icon icon-lv icon-lv6"></i>
+                                    <span class="grade-num">5000</span>
+                                </div>
+                            </div>
+                            <!-- 等级标志位置 -->
+                        </div>
+                        <label>请输入积分数值：
+                            <input class="input" value="" type="number" />
+                        </label>
+                        <button class="sure" type="submit">确定</button>
+                    </div>
+                    <pre class="language-markup"><code>
+&lt;div class="line-item site-grade"&gt;
+    &lt;div class="progress-bar-grey"&gt;&lt;/div&gt;
+    &lt;div class="progress-bar-yellow"&gt;&lt;/div&gt;
+    &lt;div class="grade-name"&gt;
+        &lt;div class="grade-img-text"&gt;
+            &lt;i class="manstro-icon icon-lv icon-lv1"&gt;&lt;/i&gt;
+            &lt;span class="grade-num"&gt;0&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="grade-img-text"&gt;
+            &lt;i class="manstro-icon icon-lv icon-lv2"&gt;&lt;/i&gt;
+            &lt;span class="grade-num"&gt;100&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="grade-img-text"&gt;
+            &lt;i class="manstro-icon icon-lv icon-lv3"&gt;&lt;/i&gt;
+            &lt;span class="grade-num"&gt;500&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="grade-img-text"&gt;
+            &lt;i class="manstro-icon icon-lv icon-lv4"&gt;&lt;/i&gt;
+            &lt;span class="grade-num"&gt;1000&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="grade-img-text"&gt;
+            &lt;i class="manstro-icon icon-lv icon-lv5"&gt;&lt;/i&gt;
+            &lt;span class="grade-num"&gt;2000&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="grade-img-text"&gt;
+            &lt;i class="manstro-icon icon-lv icon-lv6"&gt;&lt;/i&gt;
+            &lt;span class="grade-num"&gt;5000&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;label&gt;请输入积分数值：
+    &lt;input class="input" value="" type="number" /&gt;
+&lt;/label&gt;
+&lt;button class="sure" type="submit"&gt;确定&lt;/button&gt;
+                    </code></pre>
+                </section>
+                <section id="birthday-out">
+                    <h2>生日</h2>
+                    <div id="birthday-html">
+                        <label>生日：</label>
+                        <div id="birthday"></div>
+                    </div>
+                    <div>
+                        <h2>使用方法</h2>
+                        <p>直接写id="birthday"的空div</p>
+                        &lt;div id="birthday"&gt;&lt;/div&gt;
+                        <p>加上下面js并引入bday-picker.js和public.js</p>
+                    </div>
+                    <span>用到的JS</span>
+                    <pre class="language-js"><code>
+$(function() {
+    var datenow = new Date().Format("yyyy-MM-dd");
+    //用户生日
+    var birthday = '1991-04-14';
+    if (birthday != '') {
+        datenow = birthday;
+    }
+    $("#birthday").birthdaypicker({
+        dateFormat: "bigEndian",
+        monthFormat: "short",
+        placeholder: true,
+        hiddenDate: true,
+        // 设定默认日期
+        defaultDate: datenow
+    });
+});</code></pre>
+                </section>
+                <section id="pca">
+                    <h2>省市区联动</h2>
+                    <div id="pca-html">
+                        <form action="">
+                            <span class="goodsAddress">所在地区：</span>
+                            <select id="prov" name="province" data-code=""></select>省
+                            <select id="city" name="city" data-code=""></select>市
+                            <select id="area" name="area" data-code=""></select>区
+                        </form>
+                    </div>
+                    <pre class="language-markup"><code>
+&lt;form action=""&gt;
+    &lt;select id="prov" name="province" data-code=""&gt;&lt;/select&gt;省
+    &lt;select id="city" name="city" data-code=""&gt;&lt;/select&gt;市
+    &lt;select id="area" name="area" data-code=""&gt;&lt;/select&gt;区
+&lt;/form&gt;</code></pre>
+                </section>
+                <section id="ueditor">
+                    <h2>UEditor富文本编辑器</h2>
+                    <p> <a href="../examples/ueditor/index.html">本地示例demo</a> 具体写法请查看页面html代码</p>
+                    <p>这是百度前端团队开发的轻量、可定制、注重用户体验的一个编辑器。具体API详情请看链接<a href=http://fex.baidu.com/ueditor/ "">http://fex.baidu.com/ueditor/</a>
+                    </p>
+                </section>
+            </article>
+            <!-- 各组件结束 -->
+        </div>
+        <!-- 主体部分结束 -->
+        <!-- 页尾开始 -->
+        <footer>
+            Copyright &copy; 2016-2017 <a href="www.manstro.com">万洲嘉智信息科技有限公司</a>. All Rights Reserved
+        </footer>
+        <!-- 页尾结束 -->
+        <!-- 返回顶部开始 -->
+        <div class="back-to-top"></div>
+        <!-- 返回顶部结束 -->
+    </div>
+    <script src="../ui/js/public.js"></script>
+    <script src="../dep/laypage/laypage.js"></script>
+    <script src="../dep/birthdaypicker/bday-picker.js"></script>
+    <script src="../dep/pca/city2.js"></script>
+    <script src="../dep/pca/citySelect2.js"></script>
+    <script src="js/lib-components.js"></script>
+    <script src="../ui/js/jquery.waypoints.min.js"></script>
+    <script src="../dep/prism/prism.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,349 @@
+/*
+ * Title: 万洲嘉智组件库
+ * Time: 2016.05.21
+ * Author: Bruce wang
+*/
+
+
+/* ======= 遮罩层开始  ======= */
+
+.ms-overlay {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    z-index: 100;
+}
+
+/* ======= 遮罩层结束 ======= */
+
+
+/* ======= 弹出层公共样式开始 ======= */
+
+.ms-dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 101;
+    background-color: #fff;
+}
+.dialog-lg {
+    width: 800px;
+    height: 600px;
+    margin-left: -400px;
+    margin-top: -300px;
+}
+.dialog-default {
+    width: 650px;
+    height: 450px;
+    margin-left: -325px;
+    margin-top: -225px;
+}
+.dialog-sm {
+    width: 520px;
+    height: 420px;
+    margin-left: -260px;
+    margin-top: -210px;
+}
+.dialog-xs {
+    width: 400px;
+    height: 300px;
+    margin-left: -200px;
+    margin-top: -150px;
+}
+.ms-dialog .dialog-title {
+    padding-left: 14px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #00a1c3;
+}
+.ms-dialog .dialog-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 27px;
+    height: 27px;
+    background-image: url("img/icon-close.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.ms-dialog .dialog-content {
+    padding: 10px 20px;
+    line-height: 1.45;
+    overflow-y: auto;
+}
+.ms-dialog .dialog-content p {
+    margin-bottom: 10px;
+}
+.dialog-lg .dialog-content {
+    height: 530px;
+}
+.dialog-default .dialog-content {
+    height: 380px;
+}
+.dialog-sm .dialog-content {
+    height: 350px;
+}
+.dialog-xs .dialog-content {
+    height: 220px;
+}
+
+/* ======= 弹出层公共样式结束 ======= */
+
+
+/* ======= 下拉列表开始 ======= */
+
+.ms-dropdown {
+    position: relative;
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    cursor: pointer;
+}
+.ms-dropdown .dropdown-title {
+    width: 100%;
+    height: 30px;
+    background-color: #ddd;
+}
+.ms-dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+}
+.ms-dropdown .dropdown-menu li {
+    border-bottom: 1px solid #ddd;
+}
+
+/* ======= 下拉列表结束 ======= */
+
+
+/* ======= 数量 ======= */
+
+.ms-plus-minus {
+    width: 80px;
+    line-height: 26px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+.ms-plus-minus span {
+    float: left;
+    display: inline-block;
+    width: 18px;
+    text-align: center;
+    background: #f0f0f0;
+    cursor: pointer;
+}
+.ms-plus-minus .minus {
+    border-right: 1px solid #e5e5e5;
+}
+.ms-plus-minus .plus {
+    border-left: 1px solid #e5e5e5;
+}
+.ms-plus-minus .text-amount {
+    float: left;
+    padding: 0 2px;
+    width: 38px;
+    height: 26px;
+    text-align: center;
+    border: none;
+}
+
+/* ======= 数量 ======= */
+
+
+/* ======= 验证密码强度开始 ======= */
+
+#ms-pwd-strong {
+    overflow: hidden;
+}
+#ms-pwd-strong input {
+    margin-bottom: 10px;
+    width: 205px;
+    height: 30px;
+    padding: 6px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    vertical-align: middle;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#ms-pwd-strong .correct {
+    border: 1px solid green;
+}
+#ms-pwd-strong .error {
+    border: 1px solid red;
+}
+#ms-pwd-strong #tips {
+    font-size: 12px;
+}
+#ms-pwd-strong #tips span {
+    float: left;
+    width: 50px;
+    height: 20px;
+    color: #fff;
+    overflow: hidden;
+    background: #ccc;
+    margin-right: 2px;
+    line-height: 20px;
+    text-align: center;
+}
+#ms-pwd-strong #tips.s1 .active {
+    background: #f30;
+}
+#ms-pwd-strong #tips.s2 .active {
+    background: #fc0;
+}
+#ms-pwd-strong #tips.s3 .active {
+    background: #cc0;
+}
+#ms-pwd-strong #tips.s4 .active {
+    background: #090;
+}
+
+/* ======= 验证密码强度结束 ======= */
+
+
+/* ======= 进度条开始 ======= */
+
+.ms-progress {
+    width: 500px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+.progress-bar {
+    width: 0;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-color: #FBC85B;
+}
+
+/* ======= 进度条结束 ======= */
+
+
+/* ======= 默认标签页开始 ======= */
+
+.ms-tab .tab-nav {
+    height: 42px;
+}
+.ms-tab .tab-nav li {
+    float: left;
+    margin-right: 20px;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+.ms-tab .tab-content {
+    padding: 20px;
+    height: 300px;
+}
+.ms-tab .tab-content .tab-pane {
+    display: none;
+    line-height: 1.45;
+    color: #666;
+}
+.ms-tab .tab-content .tab-pane p {
+    margin-bottom: 10px;
+}
+.ms-tab .tab-content .tab-pane:first-child {
+    display: block;
+}
+
+/*默认标签页*/
+
+.tab-defalut .tab-nav {
+    border-bottom: 2px solid #209EF6;
+}
+.tab-defalut .tab-nav li {
+    margin-right: 10px;
+    border: 2px solid #DDD;
+    border-bottom: none;
+}
+.tab-defalut .tab-nav .active {
+    color: #209EF6;
+    border: 2px solid #209EF6;
+    border-bottom-color: #FFF;
+}
+.tab-defalut .tab-content {
+    border: 2px solid #209EF6;
+    border-top: none;
+}
+
+/*下划线式标签页*/
+
+.tab-line {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+.tab-line .tab-nav li:hover {
+    border-bottom: 2px solid #bf7554;
+    color: #bf7554;
+}
+.tab-line .tab-nav li.active {
+    border-bottom: 2px solid #bf7554;
+    color: #bf7554;
+}
+
+/* ======= 默认标签页结束 ======= */
+
+
+/*======= 文章开始=======*/
+
+.ms-article h3 {
+    line-height: 2;
+}
+.ms-article p {
+    margin-bottom: 10px;
+}
+
+/*======= 文章结束=======*/
+
+
+/*======= 图标库整理开始 =======*/
+
+.ms-icon {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+}
+.icon-caret {
+    width: 11px;
+    height: 7px;
+    background-image: url(img/icon-caret-grey.png);
+}
+.icon-caret-left {
+    width: 7px;
+    height: 10px;
+    background-image: url(img/icon-caret-grey-lf.png);
+}
+.icon-caret-white {
+    width: 13px;
+    height: 10px;
+    background-image: url(img/icon-caret-white.png);
+}
+
+/*======= 图标库整理结束 =======*/
